@@ -147,7 +147,7 @@
   </section>
 
   <section class="envelope">
-    <button class="envelope-button" onclick="document.querySelector('.letter-content').classList.add('show'); this.style.display='none'; document.getElementById('backgroundMusic').muted = false;">
+    <button class="envelope-button" onclick="openLetter()">
       📩 打开金宝的信
     </button>
     <div class="letter-content">
@@ -164,5 +164,21 @@
   <footer>
     <p>Made with love for 金宝最可爱， love from Yinchuan</p>
   </footer>
+
+  <script>
+    function openLetter() {
+      const music = document.getElementById('backgroundMusic');
+      const letter = document.querySelector('.letter-content');
+      const button = document.querySelector('.envelope-button');
+
+      letter.classList.add('show');
+      button.style.display = 'none';
+
+      music.muted = false;
+      music.play().catch((e) => {
+        console.log("播放失败，可能需要用户再次点击：", e);
+      });
+    }
+  </script>
 </body>
 </html>
