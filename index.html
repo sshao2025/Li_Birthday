@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>给金宝的生日惊喜</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #fff7f0;
+      color: #444;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 200px 100px;
+      background: #fdebd3;
+      background-image: url('https://wallpapers.com/images/high/moomin-desktop-1080-x-1350-nm6qos64pij7fykg.webp');
+      background-repeat: repeat;
+      background-size: contain;
+      background-position: right bottom;
+    }
+    
+    .header-title {
+      background: rgba(255, 255, 255, 0.85);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5em;
+      color: #d66586;
+      margin-bottom: 10px;
+    }
+    .header-title p {
+      font-size: 1.3em;
+      color: #555;
+    }
+    .photo-gallery {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: center;
+          gap: 20px;
+          padding: 20px;
+          overflow-x: auto;
+    }
+
+    .photo-gallery img {
+          width: 300px;
+          height: 500px;
+          object-fit: cover;
+          border-radius: 20px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .envelope {
+      max-width: 600px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .envelope-button {
+      background-color: #f5d1c3;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    .envelope-button:hover {
+      background-color: #f0bdb0;
+    }
+
+    .letter-content {
+      display: none;
+      background: url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .letter-content.show {
+      display: block;
+      opacity: 1;
+    }
+
+
+    footer {
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <audio id="backgroundMusic" autoplay loop muted>
+    <source src="happy-birthday-254480.mp3" type="audio/mpeg">
+    你的浏览器不支持音频播放。
+  </audio>
+
+ <header>
+  <div class="header-title">
+    <h1>生日快乐，金宝！</h1>
+    <p>愿你一生温柔，被世界温柔以待。</p>
+  </div>
+</header>
+
+  <section class="photo-gallery">
+    <!-- Placeholders for photos -->
+    <img src="a72a5d7b303bf76431427c11174eb618.JPG">
+    <img src="./IMG_4631.JPG">
+    <img src="./IMG_4902.JPG">
+    <img src="./IMG_4981.JPG">
+    <img src="./IMG_5724.JPG">
+
+  </section>
+
+  <section class="envelope">
+    <button class="envelope-button" onclick="document.querySelector('.letter-content').classList.add('show'); this.style.display='none'; document.getElementById('backgroundMusic').muted = false;">
+      📩 打开金宝的信
+    </button>
+    <div class="letter-content">
+      <h2>写给金宝的一封信</h2>
+      <p>亲爱的金宝，</p>
+      <p>今天是你的生日，首先祝你生日快乐！</p>
+      <p>我们一起走入了第五个年头，经历了阳光和风霜，酸甜苦辣，你的包容和善良，让我成长，我同时也给你带来了快乐，给你带来了大锤！</p>
+      <p>新的一年，祝愿你身体健康，生活快乐，早日减肥，和Nadya一起战胜萨米拉！</p>
+      <p>爱你的刀刀</p>
+      <p>2025-06-13</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with love for 金宝最可爱， love from Yinchuan</p>
+  </footer>
+</body>
+</html>
