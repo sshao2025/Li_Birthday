@@ -100,10 +100,30 @@
       font-size: 0.9em;
       color: #aaa;
     }
+
+    @media (max-width: 600px) {
+    header {
+      padding: 100px 30px;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    .header-title p {
+      font-size: 1em;
+    }
+  
+    .photo-gallery img {
+      width: 200px;
+      height: 300px;
+    }
+  }
+    
   </style>
 </head>
 <body>
-  <audio id="backgroundMusic" autoplay loop muted>
+  <audio id="backgroundMusic" autoplay loop>
     <source src="./happy-birthday-254480.mp3" type="audio/mpeg">
     你的浏览器不支持音频播放。
   </audio>
